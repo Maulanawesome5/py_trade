@@ -1,0 +1,4 @@
+# Abaikan file atau folder ini supaya tidak
+# di commit ke dalam repository
+doc
+Env
