@@ -1,0 +1,10 @@
+Cara upgrade modul python secara bersamaan
+
+1. Pastikan terkoneksi internet
+2. Cek python modul yang outdate atau expire
+    Ketikkan perintah pip list --outdate
+3. Lakukan pip freezing
+    Ketikkan perintah pip freeze > requirements.txt
+4. Lakukan upgrade
+    Ketikkan perintah pip install -r requirements.txt --upgrade
+5. Periksa kembali versi modul dengan perintah nomor 2
