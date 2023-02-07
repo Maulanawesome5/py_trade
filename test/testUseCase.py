@@ -1,18 +1,16 @@
 import pandas as pd
-import pandas_datareader as pdr
+from pandas_datareader import data as pdr
 import yfinance
 
 
 Tickers = ["AMZN", "GOOGL", "META", "MSFT", "TSLA"]
 
-dfs = []
+joined_data = {
+    "AMZN": yfinance.Ticker(Tickers[0]).history(period="max"),
+    "GOOGL" : yfinance.Ticker(Tickers[1]).history(period="max"),
+    "META" : yfinance.Ticker(Tickers[2]).history(period="max"),
+    "MSFT" : yfinance.Ticker(Tickers[3]).history(period="max"),
+    "TSLA" : yfinance.Ticker(Tickers[4]).history(period="max")
+}
 
-for ticker in Tickers:
-    df = yfinance.Ticker(ticker)
-    df = df.history(period="max")
-    dfs.append(df)
-
-# print(dfs)
-
-dfs = pd.DataFrame(dfs, columns=Tickers)
-print(dfs)
+print(joined_data)
