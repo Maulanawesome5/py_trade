@@ -1,7 +1,10 @@
 {
     "editor.minimap.autohide": true,
-    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "indentRainbow.excludedLanguages": [
+        "python"
+    ],
     "python.defaultInterpreterPath": ".\\Env\\Scripts\\python",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "workbench.colorTheme": "Dracula",
     "workbench.iconTheme": "vscode-icons",
 }
