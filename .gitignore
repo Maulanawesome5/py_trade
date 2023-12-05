@@ -4,3 +4,4 @@ doc
 Env
 data/coba/
 test/coba.py
+src/myWidgets/__pycache__
