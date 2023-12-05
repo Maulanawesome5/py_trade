@@ -27,10 +27,12 @@ class App(tk.Tk):
         # # Widget Sidebar
         # Pengaturan Layout sidebar saya taruh sini supaya bisa mendeteksi 
         # secara otomatis tinggi (height) resolusi layar
-        self.mainframe.sidebar.place(x=0, y=0, width=300, height=self.winfo_height())
+        self.mainframe.sidebar.place(x=0, y=0, width=300, height=self.winfo_height(),
+                                     in_=self.mainframe, relx=0, rely=0)
 
         # # Widget Searchbar
-        self.mainframe.searchbar.place(x=300, y=0, width=self.winfo_width(), height=75)
+        self.mainframe.searchbar.place(x=300, y=0, width=self.winfo_width(), height=75,
+                                       in_=self.mainframe, relx=0, rely=0)
 
         # # Function untuk menampilkan window aplikasi
         self.mainloop()
