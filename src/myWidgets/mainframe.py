@@ -22,8 +22,5 @@ class MainFrame(tk.Frame):
 
         # # Trading Chart Frame
         self.trading_chart_frame = ChartFrame(self)
-        self.trading_chart_frame.place(x=350, y=100, width=980, height=500, bordermode="outside")
-
-        self.test = tk.Label(self, text="MainFrame", background="blue", font=self.font_settings)
-        self.test.place(x=100, y=100)
-
+        self.trading_chart_frame.place(
+            x=350, y=100, width=980, height=500, bordermode="outside")
