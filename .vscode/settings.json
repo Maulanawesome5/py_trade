@@ -7,4 +7,11 @@
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "workbench.colorTheme": "Dracula",
     "workbench.iconTheme": "vscode-icons",
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.formatOnType": true,
+        "editor.wordBasedSuggestions": false,
+        "editor.defaultFormatter": "ms-python.autopep8",
+        "editor.formatOnSave": true
+    }
 }
