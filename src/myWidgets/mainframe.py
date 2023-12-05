@@ -1,4 +1,5 @@
 import tkinter as tk
+from myWidgets.sidebar import Sidebar
 
 
 class MainFrame(tk.Frame):
@@ -10,6 +11,10 @@ class MainFrame(tk.Frame):
 
     def __init__(self, parent):
         tk.Frame.__init__(self, background=self.mainframe_bg)
+
+        # # Sidebar depends on mainframe
+        self.sidebar = Sidebar(self, fontset=self.font_settings)
+
         self.test = tk.Label(self, text="MainFrame", background="blue", font=self.font_settings)
-        self.test.grid(row=0, column=0)
+        self.test.place(x=100, y=100)
 
