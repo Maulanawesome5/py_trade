@@ -1,5 +1,6 @@
 import tkinter as tk
 from myWidgets.sidebar import Sidebar
+from myWidgets.searchbar import Searchbar
 
 
 class MainFrame(tk.Frame):
@@ -14,6 +15,9 @@ class MainFrame(tk.Frame):
 
         # # Sidebar depends on mainframe
         self.sidebar = Sidebar(self, fontset=self.font_settings)
+
+        # # Searchbar
+        self.searchbar = Searchbar(self)
 
         self.test = tk.Label(self, text="MainFrame", background="blue", font=self.font_settings)
         self.test.place(x=100, y=100)
