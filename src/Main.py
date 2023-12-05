@@ -1,6 +1,5 @@
 import tkinter as tk
-from tkinter import ttk
-from myWidgets import menubar
+from myWidgets import menubar, mainframe
 
 
 selectionbar_color = "#EFF5F6"
@@ -21,50 +20,22 @@ class App(tk.Tk):
 
         # # Widget Frame sebagai container seluruh elemen
         # Frame ini satu tingkat di atas Root
-        self.mainframe = Main_Frame(self)
+        self.mainframe = mainframe.MainFrame(self)
+        self.mainframe.pack(expand=True, fill=tk.BOTH)
 
         # # Widget Menu (File, Edit, Setting, Help, dsb.)
         # Widget ini harus menempel ke master Root
         self.menubar = menubar.Menubar(self)
         self.config(menu=self.menubar)
 
-        # # Widget Sidebar (Tools dan Indikator trading)
-        
+        # # Widget Sidebar
+        # Pengaturan Layout sidebar saya taruh sini supaya bisa mendeteksi 
+        # secara otomatis tinggi (height) resolusi layar
+        self.mainframe.sidebar.place(x=0, y=0, width=300, height=self.winfo_height())
 
         # # Function untuk menampilkan window aplikasi
         self.mainloop()
 
 
-class Main_Frame(ttk.Frame):
-    """Frame utama satu tingkat diatas Root widget."""
-    def __init__(self, parent):
-        super().__init__()
-        ttk.Label(self, text="Disini letak mainframe", background="red").pack()
-
-
-class Sidebar(tk.Frame):
-    def __init__(self, parent:tk.Frame, sub_menu_heading:str, sub_menu_options:list):
-        tk.Frame.__init__(self, parent)
-        self.config(bg=sidebar_color)
-        self.sub_menu_heading_label = ttk.Label(self,
-                                                text=sub_menu_heading,
-                                                background=sidebar_color,
-                                                foreground="#333333",
-                                                font=("Arial", 10)) 
-        self.sub_menu_heading_label.place(x=30, y=10, anchor=tk.W)
-
-        sub_menu_sep = ttk.Separator(self, orient=tk.HORIZONTAL)
-        sub_menu_sep.place(x=30, y=30, relwidth=0.8, anchor=tk.W)
-
-        self.options = {}
-        for n, x in enumerate(sub_menu_options):
-            self.options[x] = tk.Button(self, text=x, background=sidebar_color,
-                                        font=("Arial", 9, "bold"),
-                                        border=0,
-                                        cursor="hand2",
-                                        activebackground="#FFFFFF")
-            self.options[x].place(x=30, y=45*(n+1), anchor=tk.W)
-
-
 # # Panggil interface aplikasi pada kode program dibawah
-App("Prediksi Harga Saham USA", (640, 480))
+App("Prediksi Harga Saham USA", (1280, 720))
