@@ -5,14 +5,15 @@ from myWidgets import menubar, mainframe
 class App(tk.Tk):
     """Root widget, widget yang paling dasar pada aplikasi"""
 
-    def __init__(self, title:str, resolution:tuple):
-        
+    def __init__(self, title: str, resolution: tuple):
+
         # # Setup utama root aplikasi
         super().__init__()
         self.title(title)
         self.geometry(f"{resolution[0]}x{resolution[1]}")
         self.minsize(resolution[0], resolution[1])
-        self.iconbitmap(f".\\static\\icon\\business-color_stock_icon-icons.com_53431.ico")
+        self.iconbitmap(
+            f".\\static\\icon\\business-color_stock_icon-icons.com_53431.ico")
 
         # # Widget Frame sebagai container seluruh elemen
         # Frame ini satu tingkat di atas Root
@@ -25,7 +26,7 @@ class App(tk.Tk):
         self.config(menu=self.menubar)
 
         # # Widget Sidebar
-        # Pengaturan Layout sidebar saya taruh sini supaya bisa mendeteksi 
+        # Pengaturan Layout sidebar saya taruh sini supaya bisa mendeteksi
         # secara otomatis tinggi (height) resolusi layar
         self.mainframe.sidebar.place(x=0, y=0, width=300, height=self.winfo_height(),
                                      in_=self.mainframe, relx=0, rely=0)
