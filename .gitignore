@@ -3,5 +3,8 @@
 doc
 Env
 data/coba/
-test/coba.py
+test/AAPL.csv
+test/AAPL.xlsx
+src/__pycache__
+src/myFunctions/__pycache__
 src/myWidgets/__pycache__
