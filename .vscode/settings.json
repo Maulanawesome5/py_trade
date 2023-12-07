@@ -5,7 +5,7 @@
     ],
     "python.defaultInterpreterPath": ".\\Env\\Scripts\\python",
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Default Dark Modern",
     "workbench.iconTheme": "vscode-icons",
     "[python]": {
         "diffEditor.ignoreTrimWhitespace": false,
