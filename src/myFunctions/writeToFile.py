@@ -30,7 +30,8 @@ def exportDataFrameToFile(dataframe: pd.DataFrame, directory: str, ticker: str,
     """
 
     # Format the index as date string
-    dataframe.index = dataframe.index.strftime("%Y-%m-%d")
+    # dataframe.index = dataframe.index.strftime("%Y-%m-%d")
+    dataframe["Date"] = pd.to_datetime(dataframe["Date"]).dt.date
 
     # Use f-string to create the file path
     if to_xlsx and to_csv:
@@ -63,7 +64,7 @@ def exportDataFrameToFile(dataframe: pd.DataFrame, directory: str, ticker: str,
             print(f"Error: {e}")
 
 # # Contoh penggunaan function buatan
-# 
+#
 # import yfinance as yf
 # ticker = "BBRI.JK"
 
