@@ -16,18 +16,18 @@ class Searchbar(tk.Frame):
         tk.Frame.__init__(self, background=self.searchbar_bg)
 
         self.kolom_pencarian = EntryBox(self, 50, self.font_settings)
-        self.kolom_pencarian.place(x=100, y=25, in_=self, height=30)
+        self.kolom_pencarian.place(x=200, y=25, in_=self, height=30)
 
         self.tombol_pencarian = SubmitButton(
             self, width=10, fontset=("Arial", 14), text="Temukan")
-        self.tombol_pencarian.place(x=670, y=23, in_=self)
+        self.tombol_pencarian.place(x=770, y=23, in_=self)
 
 
 class EntryBox(tk.Entry):
-    def __init__(self, parent, width: int, fontset: tuple) -> tk.Entry:
+    def __init__(self, parent, width: int, fontset: tuple):
         tk.Entry.__init__(self, width=width, font=fontset)
 
 
 class SubmitButton(tk.Button):
-    def __init__(self, parent, width: int, fontset: tuple, text: str) -> tk.Button:
+    def __init__(self, parent, width: int, fontset: tuple, text: str):
         tk.Button.__init__(self, width=width, font=fontset, text=text)
