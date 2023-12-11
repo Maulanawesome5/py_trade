@@ -3,9 +3,10 @@
 doc
 Env
 data/coba/
-test/AAPL.csv
-test/AAPL.xlsx
-test/~$AAPL.xlsx
 src/__pycache__
 src/myFunctions/__pycache__
 src/myWidgets/__pycache__
+test/AAPL.csv
+test/AAPL.xlsx
+test/~$AAPL.xlsx
+tmp/info.json
