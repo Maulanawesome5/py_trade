@@ -6,10 +6,11 @@ class Menubar(tk.Menu):
     """
     Widget Menubar untuk pilihan perintah pada aplikasi.
     """
+
     def __init__(self, parent):
         super().__init__(parent)
         self.create_widget()
-    
+
     def openfile(self):
         """
         Function untuk mengakses dataframe di local computer. Support terhadap ekstensi file `.xlsx` dan `.csv`
@@ -18,9 +19,10 @@ class Menubar(tk.Menu):
         path = r".\\data\\"
         self.filename = filedialog.askopenfilename(initialdir=path,
                                                    title="Open DataFrame...",
-                                                   filetypes=(("Excel Workbook", ".xlsx"), ("CSV", ".csv"))
+                                                   filetypes=(
+                                                       ("Excel Workbook", ".xlsx"), ("CSV", ".csv"))
                                                    )
-    
+
     def popup(self):
         """
         Function untuk menampilkan interaksi berupa messagebox / dialogbox.
@@ -68,4 +70,3 @@ class Menubar(tk.Menu):
         self.add_cascade(label="Selection", menu=menu_selection)
         self.add_cascade(label="View", menu=menu_view)
         self.add_cascade(label="Help", menu=menu_help)
-
