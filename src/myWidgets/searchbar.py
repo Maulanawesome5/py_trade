@@ -1,3 +1,4 @@
+from tkinter import messagebox
 import tkinter as tk
 
 
@@ -9,6 +10,26 @@ class Searchbar(tk.Frame):
     """
     __background_color = "#d0efb1"
     __font_settings = ("Arial", 15)
+
+    @property
+    def background_color(self):
+        pass
+
+    @property
+    def font_settings(self):
+        pass
+
+    @property
+    def searching(self):
+        pass
+
+    @classmethod
+    def get_background_color(cls):
+        return cls.__background_color
+
+    @classmethod
+    def get_font_settings(cls):
+        return cls.__font_settings
 
     def __init__(self, parent):
 
@@ -24,15 +45,14 @@ class Searchbar(tk.Frame):
         self.tombol_pencarian.place(x=770, y=23, in_=self)
 
     def pencarian(self):
-        pass
-
-    @classmethod
-    def get_background_color(cls):
-        return cls.__background_color
-
-    @classmethod
-    def get_font_settings(cls):
-        return cls.__font_settings
+        q = self.kolom_pencarian.get().upper()
+        if q == "":
+            messagebox.showerror(
+                "Error", "Kolom pencarian tidak boleh kosong.")
+        else:
+            mylabel = tk.Label(
+                self, text=f"Keyword yang anda masukkan: {q}", font=self.get_font_settings())
+            mylabel.pack()
 
 
 class EntryBox(tk.Entry):
