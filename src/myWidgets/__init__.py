@@ -3,3 +3,5 @@ from . import mainframe
 from . import menubar
 from . import searchbar
 from . import sidebar
+
+from searchbar import Searchbar
