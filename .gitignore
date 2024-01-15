@@ -9,4 +9,5 @@ src/myWidgets/__pycache__
 test/AAPL.csv
 test/AAPL.xlsx
 test/~$AAPL.xlsx
+test/recap.py
 tmp/info.json
