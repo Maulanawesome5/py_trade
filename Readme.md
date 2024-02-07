@@ -20,9 +20,25 @@ Next
 
 ## Follow Me on
 
-[<img src="static/icon/logo_sosmed_instagram.png" style="width:20%;">](https://www.instagram.com/uzumakiaji)
-[<img src="static/icon/logo_sosmed_linkedin.png" style="width:20%;">](https://www.linkedin.com/in/aji-wicaksono300699)
-[<img src="static/icon/github-logo.png" style="width:20%;">](https://www.github.com/Maulanawesome5)
+<table>
+    <tr>
+        <td>
+            <a href="https://www.instagram.com/uzumakiaji">
+                <img src="static/icon/logo_sosmed_instagram.png" style="width:20%;" alt="instagram"/>
+            </a>
+        </td>
+        <td>
+            <a href="https://www.linkedin.com/in/aji-wicaksono300699">
+                <img src="static/icon/logo_sosmed_linkedin.png" style="width:20%;" alt="linkedin"/>
+            </a>
+        </td>
+        <td>
+            <a href="https://www.github.com/Maulanawesome5">
+                <img src="static/icon/github-logo.png" style="width:20%;" alt="github">
+            </a>
+        </td>
+    </tr>
+</table>
 
 ### Note
 
